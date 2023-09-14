@@ -4,31 +4,31 @@ const appwithconnectorsdAPI = axios.create({
   headers: { Accept: "application/json", "Content-Type": "application/json" }
 })
 function api_v1_login_create(payload) {
-  return appwithconnectorsdAPI.post(`/api/v1/login/`, payload.data)
+  return appwithconnectorsdAPI.post(`/api/v1/login/`, payload)
 }
 function api_v1_store_list(payload) {
   return appwithconnectorsdAPI.get(`/api/v1/store/`)
 }
 function api_v1_store_create(payload) {
-  return appwithconnectorsdAPI.post(`/api/v1/store/`, payload.data)
+  return appwithconnectorsdAPI.post(`/api/v1/store/`, payload)
 }
 function api_v1_signup_create(payload) {
-  return appwithconnectorsdAPI.post(`/api/v1/signup/`, payload.data)
+  return appwithconnectorsdAPI.post(`/api/v1/signup/`, payload)
 }
 function api_v1_product_list(payload) {
   return appwithconnectorsdAPI.get(`/api/v1/product/`)
 }
 function api_v1_product_create(payload) {
-  return appwithconnectorsdAPI.post(`/api/v1/product/`, payload.data)
+  return appwithconnectorsdAPI.post(`/api/v1/product/`, payload)
 }
 function rest_auth_user_retrieve(payload) {
   return appwithconnectorsdAPI.get(`/rest-auth/user/`)
 }
 function rest_auth_user_update(payload) {
-  return appwithconnectorsdAPI.put(`/rest-auth/user/`, payload.data)
+  return appwithconnectorsdAPI.put(`/rest-auth/user/`, payload)
 }
 function rest_auth_user_partial_update(payload) {
-  return appwithconnectorsdAPI.patch(`/rest-auth/user/`, payload.data)
+  return appwithconnectorsdAPI.patch(`/rest-auth/user/`, payload)
 }
 function api_docs_schema_retrieve(payload) {
   return appwithconnectorsdAPI.get(`/api-docs/schema/`, {
@@ -36,7 +36,7 @@ function api_docs_schema_retrieve(payload) {
   })
 }
 function rest_auth_login_create(payload) {
-  return appwithconnectorsdAPI.post(`/rest-auth/login/`, payload.data)
+  return appwithconnectorsdAPI.post(`/rest-auth/login/`, payload)
 }
 function rest_auth_logout_retrieve(payload) {
   return appwithconnectorsdAPI.get(`/rest-auth/logout/`)
@@ -48,13 +48,10 @@ function api_v1_store_retrieve(payload) {
   return appwithconnectorsdAPI.get(`/api/v1/store/${payload.id}/`)
 }
 function api_v1_store_update(payload) {
-  return appwithconnectorsdAPI.put(`/api/v1/store/${payload.id}/`, payload.data)
+  return appwithconnectorsdAPI.put(`/api/v1/store/${payload.id}/`, payload)
 }
 function api_v1_store_partial_update(payload) {
-  return appwithconnectorsdAPI.patch(
-    `/api/v1/store/${payload.id}/`,
-    payload.data
-  )
+  return appwithconnectorsdAPI.patch(`/api/v1/store/${payload.id}/`, payload)
 }
 function api_v1_store_destroy(payload) {
   return appwithconnectorsdAPI.delete(`/api/v1/store/${payload.id}/`)
@@ -63,39 +60,33 @@ function api_v1_product_retrieve(payload) {
   return appwithconnectorsdAPI.get(`/api/v1/product/${payload.id}/`)
 }
 function api_v1_product_update(payload) {
-  return appwithconnectorsdAPI.put(
-    `/api/v1/product/${payload.id}/`,
-    payload.data
-  )
+  return appwithconnectorsdAPI.put(`/api/v1/product/${payload.id}/`, payload)
 }
 function api_v1_product_partial_update(payload) {
-  return appwithconnectorsdAPI.patch(
-    `/api/v1/product/${payload.id}/`,
-    payload.data
-  )
+  return appwithconnectorsdAPI.patch(`/api/v1/product/${payload.id}/`, payload)
 }
 function api_v1_product_destroy(payload) {
   return appwithconnectorsdAPI.delete(`/api/v1/product/${payload.id}/`)
 }
 function rest_auth_registration_create(payload) {
-  return appwithconnectorsdAPI.post(`/rest-auth/registration/`, payload.data)
+  return appwithconnectorsdAPI.post(`/rest-auth/registration/`, payload)
 }
 function rest_auth_password_reset_create(payload) {
-  return appwithconnectorsdAPI.post(`/rest-auth/password/reset/`, payload.data)
+  return appwithconnectorsdAPI.post(`/rest-auth/password/reset/`, payload)
 }
 function rest_auth_password_change_create(payload) {
-  return appwithconnectorsdAPI.post(`/rest-auth/password/change/`, payload.data)
+  return appwithconnectorsdAPI.post(`/rest-auth/password/change/`, payload)
 }
 function rest_auth_password_reset_confirm_create(payload) {
   return appwithconnectorsdAPI.post(
     `/rest-auth/password/reset/confirm/`,
-    payload.data
+    payload
   )
 }
 function rest_auth_registration_verify_email_create(payload) {
   return appwithconnectorsdAPI.post(
     `/rest-auth/registration/verify-email/`,
-    payload.data
+    payload
   )
 }
 export const apiService = {
